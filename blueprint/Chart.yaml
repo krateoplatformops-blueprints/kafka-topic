@@ -1,6 +1,6 @@
 apiVersion: v2
 name: kafka-topic
-description: A Helm chart for Kubernetes
+description: This chart creates a set of Kafka Topics using the Strimzi operator. It requires the list of topics, with their name, partitions and replicas, as well as the name of the existing Kafka Cluster. 
 
 # A chart can be either an 'application' or a 'library' chart.
 #
@@ -16,6 +16,11 @@ type: application
 # to the chart and its templates, including the app version.
 # Versions are expected to follow Semantic Versioning (https://semver.org/)
 version: CHART_VERSION
+
+dependencies:
+- name: portal-composition-page-generic
+  version: "1.1.0"
+  repository: "https://marketplace.krateo.io"
 
 home: https://krateo.io
 icon: "https://github.com/krateoplatformops/krateo/blob/main/docs/media/logo.svg"
