@@ -13,27 +13,27 @@ kafka:
   # @schema
   # description: Topics to create on the cluster
   # type: array
-  # items:
+  # items: 
+  #   properties: 
+  #     topicName:
+  #       type: string
+  #       description: Kafka topic name
+  #       required: true
+  #     partitions:
+  #       description: Number of partitions for the topic
+  #       type: integer
+  #       minimum: 1
+  #       default: 3
+  #       required: true
+  #     replicas:
+  #       description: Replication factor for the topic
+  #       type: integer
+  #       minimum: 1
+  #       default: 1
+  #       required: true
   #   type: object
-  #   required: [topicName, partitions, replicas]
   # @schema
   topics:
-  - # @schema
-    # description: Kafka topic name
-    # type: string
-    # @schema
-    topicName: "first-topic"
-    # @schema
-    # description: Number of partitions for the topic
-    # type: integer
-    # minimum: 1
-    # default: 3
-    # @schema
+  - topicName: "first-topic"
     partitions: 3
-    # @schema
-    # description: Replication factor for the topic
-    # type: integer
-    # minimum: 1
-    # default: 1
-    # @schema
     replicas: 1    
