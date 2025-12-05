@@ -44,7 +44,7 @@ apiVersion: composition.krateo.io/v1-0-5
 kind: PortalBlueprintPage
 metadata:
   name: kafka-topic
-  namespace: cloudnative-test
+  namespace: cloudnative-stack-system
 spec:
   blueprint:
     url: https://marketplace.krateo.io
